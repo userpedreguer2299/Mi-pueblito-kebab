@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Pueblito · Pedreguer</title>
+<meta name="description" content="Mi Pueblito en Pedreguer · Kebab, pizza, comida pakistaní, hamburguesas y más.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{--red:#e51b23;--red2:#ff3038;--black:#050505;--panel:#121212;--line:rgba(255,255,255,.1)}
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--black);color:#fff;line-height:1.5;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,5,5,.75);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.navin{max-width:1100px;margin:auto;min-height:66px;padding:0 20px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+nav strong{font-size:1.05rem;letter-spacing:.5px}nav strong span{color:var(--red)}
+nav a{color:#ddd;text-decoration:none;margin-left:16px;font-weight:700}
+header{min-height:92vh;padding:120px 20px 70px;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 15%,rgba(229,27,35,.28),transparent 34%),linear-gradient(135deg,#020202,#160303 60%,#050505)}
+.hero{max-width:950px}.badge{display:inline-block;background:var(--red);padding:8px 16px;border-radius:999px;font-weight:800;margin-bottom:20px;box-shadow:0 8px 30px rgba(229,27,35,.22)}
+h1{font-size:clamp(3.7rem,11vw,8rem);letter-spacing:-.07em;line-height:.85;margin-bottom:24px}
+h1 span{color:var(--red)}.hero p{font-size:1.2rem;color:#ddd;max-width:720px;margin:0 auto 30px}
+.buttons{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{display:inline-block;padding:14px 22px;border-radius:12px;text-decoration:none;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-3px)}
+.primary{background:linear-gradient(135deg,#ff3038,#a9090d);color:#fff}.secondary{background:rgba(255,255,255,.06);border:1px solid #444;color:#fff}
+.quick{max-width:1050px;margin:-35px auto 0;position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#292929;border:1px solid #333;border-radius:18px;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.5)}
+.quick div{background:#141414;padding:20px;text-align:center}.quick b{display:block}.quick span{color:#999;font-size:.88rem}
+section{max-width:1150px;margin:auto;padding:88px 20px}.title{text-align:center;margin-bottom:35px}.title h2{font-size:clamp(2.2rem,5vw,3.8rem);letter-spacing:-.05em}.title p{color:#aaa}
+.cards,.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}.card,.review,.menu-card{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.3);transition:.25s}.card:hover,.review:hover,.menu-card:hover{transform:translateY(-5px);border-color:rgba(229,27,35,.5)}
+.card h3{margin-bottom:8px}.card p{color:#bbb}
+.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.menu-card h3{font-size:1.4rem;margin-bottom:14px}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07)}.item:last-child{border-bottom:0}.item span{font-weight:700}.item b{color:#ff3942}.item small{grid-column:1/-1;color:#999}
+.full{grid-column:1/-1}.offer{border-left:4px solid var(--red);padding:15px 18px;background:#151515;border-radius:10px;margin-top:12px}.offer b{color:#fff}.offer strong{color:#ff3942}
+.reviews .stars{color:#ffd21c;font-size:1.2rem;letter-spacing:2px;margin-bottom:10px}.review p{margin-bottom:12px}.review strong{color:#999;font-size:.9rem}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}.contact a{color:#fff}
+footer{text-align:center;padding:30px 20px;background:#030303;color:#888;border-top:1px solid #222}
+.floating{position:fixed;right:18px;bottom:18px;z-index:60;padding:9px 9px 9px 17px;border:1px solid var(--line);border-radius:999px;background:rgba(8,8,8,.85);backdrop-filter:blur(20px);box-shadow:0 15px 45px rgba(0,0,0,.5)}.floating a{background:var(--red);color:white;text-decoration:none;font-weight:800;padding:11px 16px;border-radius:999px}
+@media(max-width:700px){nav a{display:none}.quick{grid-template-columns:1fr;margin:-25px 16px 0}header{min-height:86vh}.menu-grid{grid-template-columns:1fr}.full{grid-column:auto}.floating{left:12px;right:12px;text-align:center}}
+</style>
+</head>
+<body>
+
+<nav><div class="navin">
+<strong>MI <span>PUEBLITO</span></strong>
+<div><a href="#inicio">Inicio</a><a href="#carta">Carta</a><a href="#domicilio">Domicilio</a><a href="#resenas">Reseñas</a><a href="#contacto">Contacto</a></div>
+</div></nav>
+
+<header id="inicio">
+<div class="hero">
+<div class="badge">📍 PEDREGUER</div>
+<h1>MI <span>PUEBLITO</span></h1>
+<p>Kebab, pizza, hamburguesas, comida pakistaní y mucho más. Un sitio para disfrutar de comida para llevar y pedir a domicilio en Pedreguer.</p>
+<div class="buttons">
+<a class="btn primary" href="tel:+34604102656">📞 Llamar</a>
+<a class="btn secondary" href="#carta">🍴 Ver carta</a>
+</div>
+</div>
+</header>
+
+<div class="quick">
+<div><b>📍 Dirección</b><span>Carrer de la Lluna, 41 · Pedreguer</span></div>
+<div><b>🕐 Horario</b><span>12:00 – 23:59 según la carta online</span></div>
+<div><b>🚗 Servicio</b><span>Para llevar y reparto</span></div>
+</div>
+
+<section>
+<div class="title"><h2>Todo lo que te apetezca</h2><p>La oferta publicada de Mi Pueblito incluye cocina kebab, pizzas, hamburguesas y especialidades indias.</p></div>
+<div class="cards">
+<div class="card"><h3>🥙 Kebab</h3><p>Pita, rollo, platos y opciones solo carne.</p></div>
+<div class="card"><h3>🍕 Pizza</h3><p>Pizzas como Margarita y Americana, entre otras.</p></div>
+<div class="card"><h3>🍛 Comida pakistaní</h3><p>Especialidades de cocina india disponibles en el local.</p></div>
+<div class="card"><h3>🍔 Hamburguesas</h3><p>Hamburguesas con pollo y otras opciones.</p></div>
+</div>
+</section>
+
+<section id="carta">
+<div class="title"><h2>🍴 Carta</h2><p>Precios tomados de la carta online disponible; pueden cambiar.</p></div>
+<div class="menu-grid">
+
+<div class="menu-card full">
+<h3>🔥 Ofertas</h3>
+<div class="offer"><b>Oferta Especial 1</b> — 2 roll + 1 patata + bebida de 2 L <strong>15 €</strong></div>
+<div class="offer"><b>Oferta Especial 2</b> — proteína a elegir + lechuga + tomate + cebolla + salsas + pan pita + patata + bebida de 2 L <strong>15 €</strong></div>
+<div class="offer"><b>Oferta Especial 3</b> — 2 platos + bebida de 2 L, con proteína a elegir y ensalada <strong>16 €</strong></div>
+</div>
+
+<div class="menu-card">
+<h3>🥙 Menús Kebab</h3>
+<div class="item"><span>Menú Pita</span><b>7,50 €</b><small>Proteína a elegir, lechuga, tomate, cebolla, salsas + patata y bebida.</small></div>
+<div class="item"><span>Menú Pita Solo Carne</span><b>8,50 €</b><small>Proteína a elegir, salsas y pan pita + patatas y bebida.</small></div>
+<div class="item"><span>Menú Rollo</span><b>7,50 €</b><small>Proteína a elegir, lechuga, tomate, cebolla y salsas + patatas y bebida.</small></div>
+<div class="item"><span>Menú Kebab Solo Carne</span><b>8,50 €</b><small>Proteína a elegir, salsas y kebab + patatas y bebida.</small></div>
+</div>
+
+<div class="menu-card">
+<h3>🍗 Menús y raciones</h3>
+<div class="item"><span>Croquetas de atún (6)</span><b>7 €</b><small>Con patata y bebida.</small></div>
+<div class="item"><span>Pollo asado</span><b>8,50 €</b></div>
+<div class="item"><span>Nuggets de pollo (8)</span><b>7 €</b><small>Con patata y bebida.</small></div>
+<div class="item"><span>Alitas de pollo (6)</span><b>7 €</b><small>Con patatas y bebida.</small></div>
+<div class="item"><span>Nachos</span><b>9,90 €</b></div>
+<div class="item"><span>Arroz de cebolla</span><b>4,90 €</b></div>
+<div class="item"><span>Calamares a la romana</span><b>5,90 €</b></div>
+</div>
+
+<div class="menu-card">
+<h3>📦 Box Kebab</h3>
+<div class="item"><span>Box Kebab</span><b>3,50 €</b><small>Kebab en caja con proteína a elegir y salsas.</small></div>
+</div>
+
+<div class="menu-card">
+<h3>🥗 Ensaladas</h3>
+<div class="item"><span>Ensalada Nizza</span><b>4 €</b><small>Lechuga, pepinos, tomate, cebolla, olivas y atún.</small></div>
+<div class="item"><span>Ensalada de atún</span><b>4,50 €</b><small>Lechuga, atún, olivas, tomate y huevo.</small></div>
+<div class="item"><span>Ensalada mexicana</span><b>5 €</b><small>Lechuga, jamón, queso, guindilla, maíz y olivas.</small></div>
+</div>
+
+<div class="menu-card">
+<h3>🍔 Hamburguesas</h3>
+<div class="item"><span>Hamburguesa</span><b>7,50 €</b><small>Proteína a elegir, lechuga, tomate y salsa + patatas y bebida.</small></div>
+<div class="item"><span>Hamburguesa de pollo</span><b>4,50 €</b><small>Lechuga, tomate y salsa.</small></div>
+</div>
+
+<div class="menu-card full">
+<h3>🍕 Pizzas · 🍛 India · 🌯 Lahmacun</h3>
+<p style="color:#aaa">La carta online también muestra categorías de pizzas, lahmacuns, platos kebab y comida especial india. Los productos y precios completos de esas categorías no aparecen desplegados en la fuente consultada, así que no he inventado precios.</p>
+</div>
+
+</div>
+</section>
+
+<section id="domicilio">
+<div class="title"><h2>🛵 A domicilio</h2><p>Disfruta de Mi Pueblito en casa.</p></div>
+<div class="cards">
+<div class="card"><h3>📞 Pedidos</h3><p>Llama al <a href="tel:+34604102656">604 10 26 56</a> para consultar el pedido y la zona de reparto.</p></div>
+<div class="card"><h3>📍 Recogida</h3><p>Carrer de la Lluna, 41, bajo local 2, 03750 Pedreguer.</p></div>
+<div class="card"><h3>🛵 Reparto</h3><p>El establecimiento figura con servicio de entrega y para llevar.</p></div>
+</div>
+</section>
+
+<section id="resenas">
+<div class="title"><h2>⭐ Lo que dicen</h2><p>Opiniones públicas encontradas sobre Mi Pueblito en Pedreguer.</p></div>
+<div class="reviews">
+<div class="review"><div class="stars">★★★★★</div><p>“Todo muy bueno y calentito... llego super calentito y bueno. Lo recomiendo calidad precio.”</p><strong>— Aroernbivd · reseña pública</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Buena atención, y entrega rápida a domicilio.”</p><strong>— Victoret Benissa · reseña pública</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Nos encanta la pizza que hacen y puedes añadir los bordes de queso y que la entreguen a domicilio.”</p><strong>— Marelyn V · reseña pública</strong></div>
+<div class="review"><div class="stars">★★★★★</div><p>“Una gran experiencia, muy amables y serviciales, la comida es deliciosa.”</p><strong>— Ruth Lara Vives · reseña pública</strong></div>
+</div>
+</section>
+
+<section id="contacto">
+<div class="title"><h2>Contacto</h2><p>Todo lo necesario para encontrar y contactar con Mi Pueblito.</p></div>
+<div class="contact">
+<div class="card"><h3>📍 Ubicación</h3><p>Carrer de la Lluna, 41, bajo local 2<br>03750 Pedreguer, Alicante</p></div>
+<div class="card"><h3>🕐 Horario</h3><p>Lunes a domingo · 12:00 – 23:59 según la carta online.</p></div>
+<div class="card"><h3>📞 Teléfono</h3><p><a href="tel:+34604102656">+34 604 10 26 56</a></p></div>
+<div class="card"><h3>🌐 Pedidos online</h3><p>También aparece disponible en plataformas de reparto.</p></div>
+</div>
+</section>
+
+<footer>
+<p><strong>Mi Pueblito · Pedreguer</strong></p>
+<p class="small">Carrer de la Lluna, 41 · Pedreguer</p>
+</footer>
+
+<div class="floating">📞 <a href="tel:+34604102656">Llamar ahora</a></div>
+</body>
+</html>
